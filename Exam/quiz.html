@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Simple Quiz</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600&family=Rubik+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="quiz-page">
+
+    <div class="title-box">
+        <h1 class="module-title"> Quiz </h1>
+        <a href= "childrens_social.html"> <button class= "backBtn" id="backBtn"> ← </button></a>
+    </div>
+
+
+    <div class="quiz-container">
+
+        <div class="question">
+            <p><b>1. What's the name of the planet closest to the sun?</b></p>
+            <button onclick="toggleQuiz(1, this)">Show answer</button>
+            <p id="message1" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>2. What is the name of Harry Potter's wizard school?</b></p>
+            <button onclick="toggleQuiz(2, this)">Show answer</button>
+            <p id="message2" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>3. What's the name of the talking snowman in Frozen?</b></p>
+            <button onclick="toggleQuiz(3, this)">Show answer</button>
+            <p id="message3" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>4. Which animal is the world's largest mammal?</b></p>
+            <button onclick="toggleQuiz(4, this)">Show answer</button>
+            <p id="message4" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>5. Which superhero team is Spider-Man, Iron Man and Thor a part of?</b></p>
+            <button onclick="toggleQuiz(5, this)">Show answer</button>
+            <p id="message5" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>6. How tall is Norway's tallest mountain Galdhøgpiggen?</b></p>
+            <button onclick="toggleQuiz(6, this)">Show answer</button>
+            <p id="message6" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>7.If you combine red and yellow, which color do you get?</b></p>
+            <button onclick="toggleQuiz(7, this)">Show answer</button>
+            <p id="message7" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>8. What is the capital of Denmark?</b></p>
+            <button onclick="toggleQuiz(8, this)">Show answer</button>
+            <p id="message8" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>9. In which continent is Kenya located?</b></p>
+            <button onclick="toggleQuiz(9, this)">Show answer</button>
+            <p id="message9" class="answer"></p>
+        </div>
+
+        <div class="question">
+            <p><b>10. Who painted the Mona Lisa?</b></p>
+            <button onclick="toggleQuiz(10, this)">Show answer</button>
+            <p id="message10" class="answer"></p>
+        </div>
+
+            <div class="score-box">
+        <h2>Your Score</h2>
+        <p>How many did you get right? </p>
+        <div class="score-buttons">
+            <button id="score1">1-4</button>
+            <button id="score2">5-7</button>
+            <button id="score3">8-10</button>
+        </div>
+    </div>
+
+    </div>
+
+
+    <!-- Score popup (hidden initially) -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h3>Nice work!</h3>
+            <p id="extraMessage">You completed the quiz!</p>
+            
+            
+            <button id="share" class="shareBtn">Share results!</button>
+            <button id="closePopup" class="closeBtn">Close</button>
+        </div>
+    </div>
+
+        <!-- Done popup 
+    <div id="sharePopup" class="popup">
+        <div class="popup-content">
+            <h3>Share your results!</h3>
+            <p id="shareScoreText"></p>
+            <div class="popup-buttons">
+                <button id="cancelShare" class="closeBtn">Cancel</button>
+                <button id="confirmShare" class="shareBtn">Share</button>
+            </div>
+        </div>
+    </div>-->
+
+        <!-- share-popup -->
+    <div id="donePopup" class="popup">
+        <div class="popup-content">
+            <h3>Shared!</h3>
+            <p>Your score has been shared successfully.</p>
+            <button id="closeDone" class="closeBtn">Close</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

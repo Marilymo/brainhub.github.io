@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Sudoku page </title>
+    <link rel = "stylesheet" href ="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600&family=Rubik+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="sudoku-page">
+
+    <div class="title-box">
+        <h1 class="module-title"> Sudoku </h1>
+        <a href= "childrens_social.html"> <button class= "backBtn" id="backBtn"> ← </button></a>
+    </div>
+
+    <div> Mistakes: <span id="errors"> 0 </span></div>
+
+    <!-- 9x9 board-->
+    <div id="board" class="sudoku-board"></div>
+    <div id="digits"></div>
+    
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <h2>Good Job!</h2>
+            <p id="extraMessage" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
+            <button class="shareBtn" id="share">Share results! </button>
+            <button class="closeBtn" id="closePopup"> close </button>
+        </div>
+    </div>
+
+    <div id="sharePopup" class="popup">
+        <div class="popup-content">
+            <h2>Share your results with your friends</h2>
+            <div class="share-preview">
+                <p><strong>Sudoku Completed!</strong></p>
+                <p>Mistakes: <span id="shareMistakes"></span></p>
+            </div>
+            <button id="confirmShare">Share</button>
+            <button class="closeBtn" id="closeShare">cancel</button>
+        </div>
+    </div>
+
+
+    <div id="donePopup" class="popup">
+        <div class="popup-content">
+            <p>Your result has been shared to your feed!</p>
+            <button id="closeDone">OK</button>
+        </div>
+    </div>
+
+
+    <button class="autoComplete" onclick="autoComplete()">AUTO-COMPLETE</button>
+
+    <div class="sudoku-rules">
+        <h3>Sudoku Rules</h3>
+            <p>Each row must contain the numbers 1–9 without repetition.</p>
+            <p>Each column must contain the numbers 1–9 without repetition.</p>
+            <p>Each 3x3 box must contain the numbers 1–9 without repetition.</p>
+            <p>Use logic, not guessing, to fill in the numbers.</p>
+            <p>The goal is to complete the entire board correctly.</p>
+        </ul>
+    </div>
+    
+    
+    
+    
+    <script src="sudoku.js"></script>
+
+    
+
+
+</body>
+
+</html>
